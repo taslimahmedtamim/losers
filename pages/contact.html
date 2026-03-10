@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Losers</title>
+    <meta name="description" content="Get in touch with the Losers community. Send us a message or reach out via email.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>L</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand">
+                <div class="logo-icon">L</div>
+                Losers
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="leadership.html">Leadership</a>
+                <a href="sub-communities.html">Branches</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="join.html" class="btn btn-primary btn-sm">Join Us</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <span class="badge">Contact</span>
+            <h1>Get in Touch</h1>
+            <p>Have questions, suggestions, or just want to say hello? We'd love to hear from you.</p>
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Contact</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form & Social -->
+    <section>
+        <div class="container">
+            <div class="grid-2 fade-in" style="gap: 48px; align-items: start;">
+                <!-- Contact Form -->
+                <div>
+                    <h2 style="margin-bottom: 8px;">Send Us a Message</h2>
+                    <p style="margin-bottom: 32px;">We'll get back to you as soon as possible.</p>
+                    <div class="form-wrapper">
+                        <form id="contactForm" onsubmit="handleContactForm(event)">
+                            <div class="form-group">
+                                <label for="contactName"><i class="fas fa-user"
+                                        style="color: var(--primary); margin-right: 6px;"></i> Your Name *</label>
+                                <input type="text" id="contactName" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail"><i class="fas fa-envelope"
+                                        style="color: var(--primary); margin-right: 6px;"></i> Your Email *</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="Enter your email"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject"><i class="fas fa-tag"
+                                        style="color: var(--primary); margin-right: 6px;"></i> Subject</label>
+                                <select id="contactSubject" name="subject">
+                                    <option value="">Select a topic</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="membership">Membership Question</option>
+                                    <option value="events">Events Information</option>
+                                    <option value="branch">Branch Related</option>
+                                    <option value="feedback">Feedback & Suggestions</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage"><i class="fas fa-comment"
+                                        style="color: var(--primary); margin-right: 6px;"></i> Message *</label>
+                                <textarea id="contactMessage" name="message" placeholder="Write your message here..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                        <div id="contactSuccess" style="display: none; text-align: center; padding: 40px 20px;">
+                            <div style="font-size: 4rem; margin-bottom: 16px;">✉️</div>
+                            <h3 style="margin-bottom: 8px; color: var(--primary);">Message Sent!</h3>
+                            <p>Thank you for reaching out. We'll respond to your message as soon as possible.</p>
+                            <a href="../index.html" class="btn btn-secondary btn-sm" style="margin-top: 16px;">Back to
+                                Home</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social & Info -->
+                <div>
+                    <h2 style="margin-bottom: 8px;">Connect With Us</h2>
+                    <p style="margin-bottom: 32px;">Reach out to us via email.</p>
+
+                    <!-- Email Link -->
+                    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px;">
+                        <a href="mailto:taslimahmedtamim4u@gmail.com" class="contact-card" style="text-decoration: none;">
+                            <div class="contact-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--primary);">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>taslimahmedtamim4u@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="card" style="border-left: 4px solid var(--primary);">
+                        <h3 style="margin-bottom: 16px;">💡 Quick FAQ</h3>
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <div>
+                                <strong>Is joining free?</strong>
+                                <p style="margin: 4px 0 0; font-size: 0.9rem;">Yes! Losers is 100% free to join.</p>
+                            </div>
+                            <div>
+                                <strong>Can I join multiple branches?</strong>
+                                <p style="margin: 4px 0 0; font-size: 0.9rem;">Absolutely! You can be a member of as
+                                    many branches as you like.</p>
+                            </div>
+                            <div>
+                                <strong>How do I become a leader?</strong>
+                                <p style="margin: 4px 0 0; font-size: 0.9rem;">Active and dedicated members are
+                                    considered for leadership roles. Show your passion!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section style="background: var(--white);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="badge">Locations</span>
+                <h2>Our Office Locations</h2>
+                <p>Where the Losers community gathers and operates.</p>
+            </div>
+            <div class="grid-2 fade-in" style="gap: 32px;">
+                <!-- President's House -->
+                <div class="card" style="text-align: center; border-left: 4px solid var(--primary);">
+                    <div style="font-size: 3rem; margin-bottom: 16px;">🏛️</div>
+                    <h3>The White House (Apon Nir)</h3>
+                    <span class="role" style="color: var(--primary); font-weight: 600;">President's House</span>
+                    <p style="margin-top: 12px;">The official residence of our President. This exclusive location serves
+                        as the private meeting point for head branch members only. Key decisions and leadership
+                        discussions take place here.</p>
+                    <div
+                        style="margin-top: 16px; padding: 10px 20px; background: rgba(108,92,231,0.08); border-radius: 8px; display: inline-block;">
+                        <i class="fas fa-lock" style="color: var(--primary); margin-right: 6px;"></i>
+                        <strong>Access:</strong> Head Branch Members Only
+                    </div>
+                </div>
+                <!-- Head Office -->
+                <div class="card" style="text-align: center; border-left: 4px solid var(--secondary);">
+                    <div style="font-size: 3rem; margin-bottom: 16px;">🏢</div>
+                    <h3>Jannati Place (Nodir Par)</h3>
+                    <span class="role" style="color: var(--secondary-dark); font-weight: 600;">Head Office</span>
+                    <p style="margin-top: 12px;">The main headquarters of the Losers community. This is the central hub
+                        where all members are welcome to gather, hang out, attend events, and be part of the action.</p>
+                    <div
+                        style="margin-top: 16px; padding: 10px 20px; background: rgba(0,206,201,0.08); border-radius: 8px; display: inline-block;">
+                        <i class="fas fa-door-open" style="color: var(--secondary); margin-right: 6px;"></i>
+                        <strong>Access:</strong> All Members Welcome
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon">L</div>
+                        Losers
+                    </div>
+                    <p>A vibrant social community built on friendship, fun, and shared interests. Together we play,
+                        together we grow.</p>
+                    <div class="footer-social">
+                        <a href="mailto:taslimahmedtamim4u@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Branches</h4>
+                    <ul class="footer-links">
+                        <li><a href="efootball.html">eFootball Community</a></li>
+                        <li><a href="coc.html">COC Community</a></li>
+                        <li><a href="sub-communities.html">All Branches</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="join.html">Join Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Losers. All rights reserved. Built with ❤️ by the community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

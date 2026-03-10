@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losers — Where Friendship Wins</title>
+    <meta name="description"
+        content="Losers — A vibrant social community built on friendship, shared interests, and togetherness.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>L</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <div class="logo-icon">L</div>
+                Losers
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/leadership.html">Leadership</a>
+                <a href="pages/sub-communities.html">Branches</a>
+                <a href="pages/events.html">Events</a>
+                <a href="pages/blog.html">Blog</a>
+                <a href="pages/contact.html">Contact</a>
+                <a href="pages/join.html" class="btn btn-primary btn-sm">Join Us</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-fullscreen">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-orb hero-orb--3"></div>
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="container">
+            <div class="hero-center">
+                <div class="badge hero-animate" style="--delay: 0.1s;">
+                    <i class="fas fa-code"></i>
+                    Building Bonds, Creating Memories
+                </div>
+                <h1 class="hero-animate hero-title" style="--delay: 0.3s;"><span>Losers</span> Official Community</h1>
+                <p class="hero-animate" style="--delay: 0.5s;">A vibrant social community built on friendship, fun, and
+                    shared interests. We gather, we play, we grow — together. Because in this community, everyone wins.
+                </p>
+                <div class="hero-buttons hero-animate" style="justify-content: center; --delay: 0.7s;">
+                    <a href="pages/about.html" class="btn btn-primary">
+                        Our Community <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="pages/events.html" class="btn btn-secondary">
+                        Explore Events <i class="fas fa-calendar"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator" style="--delay: 1s;">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <span class="badge">About Us</span>
+                    <h2>Who We Are</h2>
+                    <p>Welcome to <strong>Losers</strong> — a passionate and tight-knit social community where
+                        friendship comes first. What started as a small group of friends has grown into a multi-branch
+                        organization with 30 active members across gaming, social activities, and much more.</p>
+                    <p>Our mission is to create a welcoming space where everyone can connect, share interests, compete
+                        in friendly matches, and build lasting memories together. Every member is valued, every voice is
+                        heard.</p>
+                </div>
+                <div class="about-right fade-in">
+                    <h3 class="vision-title">Our Vision</h3>
+                    <p class="vision-text">To build the most inclusive and active social community where friendship
+                        transcends boundaries, and every member finds their place to grow, play, and belong.</p>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-users"></i></div>
+                            <h4>Community</h4>
+                            <p>Building a vibrant community of friends and enthusiasts</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-trophy"></i></div>
+                            <h4>Excellence</h4>
+                            <p>Striving for excellence in all our endeavors</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-gamepad"></i></div>
+                            <h4>Gaming</h4>
+                            <p>Competitive spirit through eFootball & COC</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <h4>Events</h4>
+                            <p>Organizing memorable events and gatherings</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Numbers / Stats -->
+    <section class="section-darker">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Losers in Numbers</h2>
+                <p>Our impact and growing community</p>
+            </div>
+            <div class="stats-row fade-in">
+                <div class="stat-item">
+                    <h3 class="stat-number" data-count="30">0</h3>
+                    <p>Members</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-count="30">0</h3>
+                    <p>Events Held</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-count="3">0</h3>
+                    <p>Sub Communities</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-count="2">0</h3>
+                    <p>Years of Friendship</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message from Our President -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Message from Our <span style="color: var(--primary);">President</span></h2>
+                <p>A message from the founder and president of Losers</p>
+            </div>
+            <div class="president-card fade-in">
+                <div class="president-avatar">
+                    <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                </div>
+                <h3>Abid Hasan Wasin (Murgi)</h3>
+                <p class="president-role">Founder & President, Losers</p>
+                <blockquote class="president-quote">
+                    "It gives me great pride to see Losers flourishing as a platform for friendship, fun, and
+                    togetherness. What started as a small group of friends has grown into something truly special.
+                    Losers is more than just a community — it's a family where everyone belongs, where we laugh
+                    together, compete together, and grow together. I encourage every member to make the most of what
+                    we've built and help us take this community to new heights."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Messages from Leaders -->
+    <section class="section-darker">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Messages from Our <span style="color: var(--primary);">Leaders</span></h2>
+                <p>Inspiring words from the people who guide and shape our community</p>
+            </div>
+            <div class="grid-3 fade-in">
+                <!-- General Secretary -->
+                <div class="leader-card">
+                    <div class="leader-avatar">
+                        <div class="avatar-placeholder small"><i class="fas fa-user"></i></div>
+                    </div>
+                    <h4>Pervez Khan Shadhin (Bunty)</h4>
+                    <p class="leader-role">General Secretary, Losers Main</p>
+                    <blockquote class="leader-quote">
+                        "Being part of Losers has been an incredible journey. As General Secretary, I've seen firsthand
+                        how this community brings people together. Every event we organize, every match we play,
+                        strengthens the bonds between us. I'm proud to serve this amazing family."
+                    </blockquote>
+                </div>
+                <!-- eFootball President -->
+                <div class="leader-card">
+                    <div class="leader-avatar">
+                        <div class="avatar-placeholder small"><i class="fas fa-user"></i></div>
+                    </div>
+                    <h4>Hossain Rahman (Button)</h4>
+                    <p class="leader-role">President, eFootball Branch</p>
+                    <blockquote class="leader-quote">
+                        "The eFootball community within Losers is growing stronger every day. Our tournaments bring out
+                        the best competitive spirit while keeping the fun alive. Whether you're a pro or a beginner,
+                        there's always a place for you on the pitch with us."
+                    </blockquote>
+                </div>
+                <!-- COC President -->
+                <div class="leader-card">
+                    <div class="leader-avatar">
+                        <div class="avatar-placeholder small"><i class="fas fa-user"></i></div>
+                    </div>
+                    <h4>Taslim Ahmed Tamim (Qamla)</h4>
+                    <p class="leader-role">President, COC Clan Branch</p>
+                    <blockquote class="leader-quote">
+                        "Our COC clan is more than just a game — it's a brotherhood. We strategize together, war
+                        together, and celebrate victories together. The Losers COC branch has become one of the most
+                        active and dedicated clans around. Join us and feel the difference."
+                    </blockquote>
+                </div>
+            </div>
+            <!-- All Members -->
+            <div class="members-message fade-in">
+                <div class="members-message-icon"><i class="fas fa-heart"></i></div>
+                <h3>To All Our Members</h3>
+                <p>You are the heart and soul of Losers. Every single one of you makes this community what it is. Your
+                    energy, your laughter, your participation — that's what keeps us going. Thank you for being a part
+                    of this incredible family. Together, we're unstoppable! 💪</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Events -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Recent and Upcoming <span style="color: var(--primary);">Events</span></h2>
+                <p>Check out the latest happenings in our community</p>
+            </div>
+            <div class="grid-3 fade-in">
+                <div class="event-card-v2">
+                    <div class="event-card-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                        <span class="event-tag">Upcoming</span>
+                        <div class="event-emoji">🌙</div>
+                    </div>
+                    <div class="event-card-body">
+                        <h3>Iftari Mahfil 2026</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-calendar"></i> Ramadan 2026</span>
+                            <span><i class="fas fa-clock"></i> Iftar Time</span>
+                        </div>
+                        <p>A special Ramadan gathering to break fast together, share food, and strengthen our bonds.</p>
+                    </div>
+                </div>
+                <div class="event-card-v2">
+                    <div class="event-card-image" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <span class="event-tag">Upcoming</span>
+                        <div class="event-emoji">🏆</div>
+                    </div>
+                    <div class="event-card-body">
+                        <h3>Annual Community Gathering 2026</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-calendar"></i> Mar 25, 2026</span>
+                            <span><i class="fas fa-clock"></i> 4:00 PM - 10:00 PM</span>
+                        </div>
+                        <p>Join us for the biggest community event of the year! Games, food, and memories await.</p>
+                    </div>
+                </div>
+                <div class="event-card-v2">
+                    <div class="event-card-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                        <span class="event-tag past">Past</span>
+                        <div class="event-emoji">⚽</div>
+                    </div>
+                    <div class="event-card-body">
+                        <h3>eFootball Tournament Season 5</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-calendar"></i> Feb 20, 2026</span>
+                            <span><i class="fas fa-clock"></i> 3:00 PM - 8:00 PM</span>
+                        </div>
+                        <p>An exciting inter-community tournament with 32 players competing for the championship.</p>
+                    </div>
+                </div>
+                <div class="event-card-v2">
+                    <div class="event-card-image" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                        <span class="event-tag past">Past</span>
+                        <div class="event-emoji">🏰</div>
+                    </div>
+                    <div class="event-card-body">
+                        <h3>COC Clan War League</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 15, 2026</span>
+                            <span><i class="fas fa-clock"></i> All Day</span>
+                        </div>
+                        <p>Our COC community participated in the monthly clan war league with outstanding results.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;" class="fade-in">
+                <a href="pages/events.html" class="btn btn-primary">View All Events <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-darker" style="padding: 80px 0;">
+        <div class="container">
+            <div class="cta-box fade-in">
+                <h2>Ready to Be Part of Something Amazing?</h2>
+                <p>Join Losers today and connect with awesome people who share your interests.</p>
+                <a href="pages/join.html" class="btn btn-primary btn-lg">Join Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon">L</div>
+                        Losers
+                    </div>
+                    <p>A vibrant social community built on friendship, fun, and shared interests. Together we play,
+                        together we grow.</p>
+                    <div class="footer-social">
+                        <a href="mailto:taslimahmedtamim4u@gmail.com" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/leadership.html">Leadership</a></li>
+                        <li><a href="pages/events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Branches</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/efootball.html">eFootball Community</a></li>
+                        <li><a href="pages/coc.html">COC Community</a></li>
+                        <li><a href="pages/sub-communities.html">All Branches</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/join.html">Join Us</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Losers. All rights reserved. Built with ❤️ by the community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

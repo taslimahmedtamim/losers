@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Losers</title>
+    <meta name="description" content="Browse photos and memories from the Losers community events and gatherings.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>L</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand">
+                <div class="logo-icon">L</div>
+                Losers
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="leadership.html">Leadership</a>
+                <a href="sub-communities.html">Branches</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="join.html" class="btn btn-primary btn-sm">Join Us</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <span class="badge">Gallery</span>
+            <h1>Community Moments</h1>
+            <p>Photos and memories from our events, gatherings, and everyday community life.</p>
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Gallery</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Filter -->
+    <section>
+        <div class="container">
+            <div class="tabs fade-in" style="margin-bottom: 40px;">
+                <button class="tab-btn active" onclick="filterGallery('all', event)">All</button>
+                <button class="tab-btn" onclick="filterGallery('events', event)">Events</button>
+                <button class="tab-btn" onclick="filterGallery('gaming', event)">Gaming</button>
+                <button class="tab-btn" onclick="filterGallery('meetups', event)">Meetups</button>
+                <button class="tab-btn" onclick="filterGallery('celebrations', event)">Celebrations</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid fade-in" id="galleryGrid">
+                <!-- Large featured item -->
+                <div class="gallery-item large" data-category="events" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #10b981, #6ee7b7);">
+                        <text x="300" y="200" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="80">🏆</text>
+                        <text x="300" y="280" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="18" font-weight="600">Annual Gathering
+                            2025</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>Annual Gathering 2025</h4>
+                        <p>Community's biggest event</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="gaming" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #6ee7b7, #f59e0b);">
+                        <text x="200" y="130" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="60">⚽</text>
+                        <text x="200" y="190" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="14" font-weight="600">eFootball Finals</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>eFootball Tournament Finals</h4>
+                        <p>Season 5 grand finals</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="gaming" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #3b82f6, #10b981);">
+                        <text x="200" y="130" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="60">🏰</text>
+                        <text x="200" y="190" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="14" font-weight="600">COC War Victory</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>COC Clan War Victory</h4>
+                        <p>Perfect war win!</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="meetups" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #f59e0b, #10b981);">
+                        <text x="200" y="130" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="60">🤝</text>
+                        <text x="200" y="190" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="14" font-weight="600">First Meetup</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>First Community Meetup</h4>
+                        <p>November 2025</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="celebrations" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #10b981, #3b82f6);">
+                        <text x="200" y="130" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="60">🎉</text>
+                        <text x="200" y="190" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="14" font-weight="600">New Year 2026</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>New Year Celebration</h4>
+                        <p>Welcoming 2026 together</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #6ee7b7, #3b82f6);">
+                        <text x="200" y="130" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="60">🎮</text>
+                        <text x="200" y="190" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="14" font-weight="600">Game Night</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>Community Game Night</h4>
+                        <p>Monthly gaming session</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="celebrations" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #f59e0b, #6ee7b7);">
+                        <text x="200" y="130" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="60">🎂</text>
+                        <text x="200" y="190" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="14" font-weight="600">1st Anniversary</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>1st Anniversary</h4>
+                        <p>One year celebration</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="gaming" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #3b82f6, #f59e0b);">
+                        <text x="200" y="130" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="60">🏅</text>
+                        <text x="200" y="190" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="14" font-weight="600">CWL Results</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>CWL 2nd Place</h4>
+                        <p>January CWL results</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="meetups" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #10b981, #f59e0b);">
+                        <text x="200" y="130" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="60">☕</text>
+                        <text x="200" y="190" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="14" font-weight="600">Coffee Hangout</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>Coffee Hangout</h4>
+                        <p>Casual meetup with members</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%; background: linear-gradient(135deg, #6ee7b7, #10b981);">
+                        <text x="200" y="130" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="60">📺</text>
+                        <text x="200" y="190" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                            font-family="Poppins, sans-serif" font-size="14" font-weight="600">Live Stream</text>
+                    </svg>
+                    <div class="overlay">
+                        <h4>Tournament Live Stream</h4>
+                        <p>Live broadcasting setup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="close-btn" onclick="closeLightbox()">&times;</button>
+        <img id="lightboxImg" src="" alt="Gallery Image">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon">L</div>
+                        Losers
+                    </div>
+                    <p>A vibrant social community built on friendship, fun, and shared interests. Together we play,
+                        together we grow.</p>
+                    <div class="footer-social">
+                        <a href="mailto:taslimahmedtamim4u@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Branches</h4>
+                    <ul class="footer-links">
+                        <li><a href="efootball.html">eFootball Community</a></li>
+                        <li><a href="coc.html">COC Community</a></li>
+                        <li><a href="sub-communities.html">All Branches</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="join.html">Join Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Losers. All rights reserved. Built with ❤️ by the community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

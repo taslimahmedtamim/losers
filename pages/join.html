@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us — Losers</title>
+    <meta name="description" content="Join the Losers community today and become part of a vibrant group of friends.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>L</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand">
+                <div class="logo-icon">L</div>
+                Losers
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="leadership.html">Leadership</a>
+                <a href="sub-communities.html">Branches</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="join.html" class="btn btn-primary btn-sm">Join Us</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <span class="badge">Join Us</span>
+            <h1>Become a Member</h1>
+            <p>Join Losers and be part of something amazing!</p>
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Join</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Join -->
+    <section>
+        <div class="container">
+            <div class="grid-2 fade-in" style="gap: 48px; align-items: start;">
+                <!-- Membership Form -->
+                <div>
+                    <h2 style="margin-bottom: 8px;">Membership Form</h2>
+                    <p style="margin-bottom: 32px;">Fill out the form below and we'll get back to you soon!</p>
+                    <div class="form-wrapper">
+                        <form id="joinForm" onsubmit="handleJoinForm(event)">
+                            <div class="form-group">
+                                <label for="fullName"><i class="fas fa-user"
+                                        style="color: var(--primary); margin-right: 6px;"></i> Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"
+                                        style="color: var(--primary); margin-right: 6px;"></i> Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="fas fa-phone"
+                                        style="color: var(--primary); margin-right: 6px;"></i> Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="branch"><i class="fas fa-code-branch"
+                                        style="color: var(--primary); margin-right: 6px;"></i> Interested Branch</label>
+                                <select id="branch" name="branch">
+                                    <option value="">Select a branch (optional)</option>
+                                    <option value="main">Main Community</option>
+                                    <option value="efootball">eFootball Community</option>
+                                    <option value="coc">COC Community</option>
+                                    <option value="multiple">Multiple Branches</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment"
+                                        style="color: var(--primary); margin-right: 6px;"></i> Message</label>
+                                <textarea id="message" name="message"
+                                    placeholder="Tell us a little about yourself and why you want to join..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                <i class="fas fa-paper-plane"></i> Submit Application
+                            </button>
+                        </form>
+                        <div id="formSuccess" style="display: none; text-align: center; padding: 40px 20px;">
+                            <div style="font-size: 4rem; margin-bottom: 16px;">🎉</div>
+                            <h3 style="margin-bottom: 8px; color: var(--primary);">Application Submitted!</h3>
+                            <p>Thank you for your interest in joining Losers. We'll review your application and get back
+                                to you soon!</p>
+                            <a href="../index.html" class="btn btn-secondary btn-sm" style="margin-top: 16px;">Back to
+                                Home</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits -->
+                <div>
+                    <h2 style="margin-bottom: 8px;">Why Join Us?</h2>
+                    <p style="margin-bottom: 32px;">Here's what you'll get as a member.</p>
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <div class="card" style="display: flex; gap: 20px; align-items: start;">
+                            <div class="card-icon"
+                                style="background: rgba(108, 92, 231, 0.1); flex-shrink: 0; margin-bottom: 0; min-width: 56px;">
+                                🤝</div>
+                            <div>
+                                <h3 style="font-size: 1.05rem; margin-bottom: 6px;">Amazing Friendships</h3>
+                                <p style="margin: 0; font-size: 0.9rem;">Connect with like-minded people who share your
+                                    interests and form lasting bonds.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="display: flex; gap: 20px; align-items: start;">
+                            <div class="card-icon"
+                                style="background: rgba(253, 121, 168, 0.1); flex-shrink: 0; margin-bottom: 0; min-width: 56px;">
+                                🎮</div>
+                            <div>
+                                <h3 style="font-size: 1.05rem; margin-bottom: 6px;">Gaming Competitions</h3>
+                                <p style="margin: 0; font-size: 0.9rem;">Participate in regular tournaments, leagues,
+                                    and friendly matches across all branches.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="display: flex; gap: 20px; align-items: start;">
+                            <div class="card-icon"
+                                style="background: rgba(0, 206, 201, 0.1); flex-shrink: 0; margin-bottom: 0; min-width: 56px;">
+                                🎉</div>
+                            <div>
+                                <h3 style="font-size: 1.05rem; margin-bottom: 6px;">Exclusive Events</h3>
+                                <p style="margin: 0; font-size: 0.9rem;">Access to member-only events, gatherings, and
+                                    community celebrations.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="display: flex; gap: 20px; align-items: start;">
+                            <div class="card-icon"
+                                style="background: rgba(162, 155, 254, 0.1); flex-shrink: 0; margin-bottom: 0; min-width: 56px;">
+                                📈</div>
+                            <div>
+                                <h3 style="font-size: 1.05rem; margin-bottom: 6px;">Skill Growth</h3>
+                                <p style="margin: 0; font-size: 0.9rem;">Improve your gaming skills through mentoring,
+                                    practice sessions, and strategy sharing.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="display: flex; gap: 20px; align-items: start;">
+                            <div class="card-icon"
+                                style="background: rgba(108, 92, 231, 0.1); flex-shrink: 0; margin-bottom: 0; min-width: 56px;">
+                                👑</div>
+                            <div>
+                                <h3 style="font-size: 1.05rem; margin-bottom: 6px;">Leadership Opportunities</h3>
+                                <p style="margin: 0; font-size: 0.9rem;">Step up and lead! Become a branch president,
+                                    moderator, or executive member.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="display: flex; gap: 20px; align-items: start;">
+                            <div class="card-icon"
+                                style="background: rgba(253, 121, 168, 0.1); flex-shrink: 0; margin-bottom: 0; min-width: 56px;">
+                                🏠</div>
+                            <div>
+                                <h3 style="font-size: 1.05rem; margin-bottom: 6px;">A Place to Belong</h3>
+                                <p style="margin: 0; font-size: 0.9rem;">Find your second family in a community that
+                                    values and accepts everyone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon">L</div>
+                        Losers
+                    </div>
+                    <p>A vibrant social community built on friendship, fun, and shared interests. Together we play,
+                        together we grow.</p>
+                    <div class="footer-social">
+                        <a href="mailto:taslimahmedtamim4u@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Branches</h4>
+                    <ul class="footer-links">
+                        <li><a href="efootball.html">eFootball Community</a></li>
+                        <li><a href="coc.html">COC Community</a></li>
+                        <li><a href="sub-communities.html">All Branches</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="join.html">Join Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Losers. All rights reserved. Built with ❤️ by the community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

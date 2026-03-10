@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Losers</title>
+    <meta name="description" content="Read the latest stories, updates, and insights from the Losers community blog.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>L</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand">
+                <div class="logo-icon">L</div>
+                Losers
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="leadership.html">Leadership</a>
+                <a href="sub-communities.html">Branches</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="join.html" class="btn btn-primary btn-sm">Join Us</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <span class="badge">Blog</span>
+            <h1>Community Stories & News</h1>
+            <p>Stories, recaps, announcements, and insights from the Losers.</p>
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Blog</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Filter -->
+    <section>
+        <div class="container">
+            <div class="tabs fade-in" style="margin-bottom: 48px;">
+                <button class="tab-btn active" onclick="filterBlog('all', event)">All Posts</button>
+                <button class="tab-btn" onclick="filterBlog('announcement', event)">Announcements</button>
+                <button class="tab-btn" onclick="filterBlog('recap', event)">Event Recaps</button>
+                <button class="tab-btn" onclick="filterBlog('story', event)">Stories</button>
+            </div>
+
+            <!-- Featured Blog Post -->
+            <div class="fade-in" style="margin-bottom: 48px;">
+                <div style="background: var(--white); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--card-shadow); display: grid; grid-template-columns: 1fr 1fr;"
+                    data-category="announcement">
+                    <div
+                        style="background: linear-gradient(135deg, #10b981, #f59e0b); display: flex; align-items: center; justify-content: center; min-height: 300px;">
+                        <span style="font-size: 5rem; color: rgba(255,255,255,0.3);">📢</span>
+                    </div>
+                    <div style="padding: 40px;">
+                        <div style="display: flex; gap: 12px; margin-bottom: 16px; align-items: center;">
+                            <span class="tag featured">Featured</span>
+                            <span class="blog-tag">Announcement</span>
+                        </div>
+                        <h2 style="margin-bottom: 12px; font-size: 1.5rem;">New Branch Coming: Losers PUBG Community
+                        </h2>
+                        <div class="blog-meta" style="margin-bottom: 16px;">
+                            <span><i class="fas fa-user"></i> Abid Hasan Wasin</span>
+                            <span><i class="fas fa-clock"></i> Mar 1, 2026</span>
+                            <span><i class="fas fa-comment"></i> 24 Comments</span>
+                        </div>
+                        <p>We're thrilled to announce the creation of a brand new branch — Losers PUBG Community! After
+                            receiving numerous requests from our members who are passionate about PUBG Mobile, we've
+                            decided to officially launch this new sub-community. Applications for Branch President are
+                            now open!</p>
+                        <a href="javascript:void(0)" class="btn btn-primary btn-sm" style="margin-top: 8px;">Read Full Post →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="grid-3 fade-in" id="blogGrid">
+                <div class="blog-card" data-category="recap">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #6ee7b7, #10b981);">📖</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Recap</span>
+                            <span><i class="fas fa-clock"></i> Feb 22, 2026</span>
+                        </div>
+                        <h3>eFootball Tournament Season 5 — Full Recap</h3>
+                        <p>A thrilling tournament that saw unexpected upsets, last-minute comebacks, and incredible
+                            moments of skill.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="story">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #10b981, #3b82f6);">💬</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Story</span>
+                            <span><i class="fas fa-clock"></i> Feb 10, 2026</span>
+                        </div>
+                        <h3>How Losers Changed My Life</h3>
+                        <p>A heartfelt story from one of our members about finding friendship, confidence, and a sense
+                            of belonging.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="announcement">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #f59e0b, #6ee7b7);">📢</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Announcement</span>
+                            <span><i class="fas fa-clock"></i> Feb 1, 2026</span>
+                        </div>
+                        <h3>Community Rules Update 2026</h3>
+                        <p>We've updated our community guidelines to ensure a safe and friendly environment for all
+                            members.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="recap">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #3b82f6, #10b981);">🏰</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Recap</span>
+                            <span><i class="fas fa-clock"></i> Jan 18, 2026</span>
+                        </div>
+                        <h3>January CWL Results — We Crushed It!</h3>
+                        <p>Our COC clan achieved 2nd place in the January Clan War League. Here's how we did it.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="story">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #f59e0b, #10b981);">🌟</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Story</span>
+                            <span><i class="fas fa-clock"></i> Jan 5, 2026</span>
+                        </div>
+                        <h3>From Stranger to Family</h3>
+                        <p>Three members share their journey from joining as strangers to becoming an inseparable group
+                            of friends.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="recap">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #6ee7b7, #3b82f6);">🎉</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Recap</span>
+                            <span><i class="fas fa-clock"></i> Jan 2, 2026</span>
+                        </div>
+                        <h3>New Year Celebration Highlights</h3>
+                        <p>Recap of our amazing virtual New Year celebration with games, giveaways, and community
+                            bonding.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="announcement">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #10b981, #6ee7b7);">🎯</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Announcement</span>
+                            <span><i class="fas fa-clock"></i> Dec 15, 2025</span>
+                        </div>
+                        <h3>2026 Community Roadmap</h3>
+                        <p>Our plans for the upcoming year including new branches, events, and exciting community
+                            features.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="story">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #3b82f6, #f59e0b);">🎮</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Story</span>
+                            <span><i class="fas fa-clock"></i> Nov 28, 2025</span>
+                        </div>
+                        <h3>The Day We Won Our First Clan War</h3>
+                        <p>A nostalgic look back at the very first clan war our COC community won and what it meant to
+                            us.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="recap">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #f59e0b, #6ee7b7);">🎂</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Recap</span>
+                            <span><i class="fas fa-clock"></i> Sep 5, 2025</span>
+                        </div>
+                        <h3>1st Anniversary Celebration Recap</h3>
+                        <p>Relive the amazing week-long celebration of our community's first anniversary.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon">L</div>
+                        Losers
+                    </div>
+                    <p>A vibrant social community built on friendship, fun, and shared interests. Together we play,
+                        together we grow.</p>
+                    <div class="footer-social">
+                        <a href="mailto:taslimahmedtamim4u@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Branches</h4>
+                    <ul class="footer-links">
+                        <li><a href="efootball.html">eFootball Community</a></li>
+                        <li><a href="coc.html">COC Community</a></li>
+                        <li><a href="sub-communities.html">All Branches</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="join.html">Join Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Losers. All rights reserved. Built with ❤️ by the community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
